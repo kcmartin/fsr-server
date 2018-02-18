@@ -7,5 +7,6 @@ app.get('/', (req, res) => {
     res.send({ hi: 'there' })
 });
 
-// tell node to listen on port 5000
-app.listen(5000);
+// dynamically get port
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
